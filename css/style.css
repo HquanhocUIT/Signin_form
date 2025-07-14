@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    --primary-color: #ddd;
+    --secondary-color: #fff;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* Chiếm đủ chiều cao màn hình */
+    background: var(--primary-color);
+}
+
+/* Khối chứa toàn bộ: chia 2 phần (signin + signup) */
+.wrapper {
+    display: flex;
+    width: 800px;
+    background: var(--secondary-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Chia signin và signup */
+.signin,
+.signup {
+    flex: 1;
+    /* mỗi bên chiếm 50% */
+    padding: 40px;
+}
+
+/* Bên signin: nền trắng */
+.signin {
+    font-size: 18px;
+    text-align: center;
+    background: var(--primary-color);
+}
+
+/* Bên signup: nền gradient xanh */
+.signup {
+    background: linear-gradient(135deg, #00b894, #00cec9);
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Tiêu đề welcomeback */
+.signup h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* Đoạn p trong signup */
+.signup p {
+    margin-bottom: 20px;
+    width: 350px;
+    text-align: center;
+    line-height: 1.5;
+    /* giãn dòng dễ đọc */
+}
+
+.signup .signup-btn {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--primary-color);
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Hover signup btn */
+.signup .signup-btn:hover {
+    background: var(--primary-color);
+    /* Hover: nền trắng đậm */
+    color: #00b894;
+    /* Hover: chữ xanh lá */
+}
+
+/* Sigin h1 */
+h1 {
+    margin-bottom: 20px;
+}
+
+/* .input-box */
+.input-box {
+    position: relative;
+    margin: 20px 0;
+}
+
+/* .input-box input */
+.input-box input {
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Icon trong input */
+.input-box i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    /* Dịch lên 50% cho đúng giữa */
+    color: #999;
+}
+
+/*  Remember me + Forgot password */
+.remember-forget {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+/* Link Forgot password */
+.remember-forget a {
+    text-decoration: none;
+    color: #00b894;
+}
+
+/* Nút Signin chính */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: #00b894;
+    border: none;
+    color: var(--primary-color);
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+/* or sign in with */
+.register-link {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* social login */
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* social btn img*/
+.social-btn i {
+    font-size: 28px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Hover icon mạng xã hội: phóng to nhẹ */
+.social-btn img:hover {
+    transform: scale(1.1);
+}
