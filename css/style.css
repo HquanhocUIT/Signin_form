@@ -5,11 +5,13 @@
     font-family: Arial, sans-serif;
 }
 
+/* ROOT */
 :root {
     --primary-color: #ddd;
     --secondary-color: #fff;
 }
 
+/* BODY  */
 body {
     display: flex;
     align-items: center;
@@ -19,7 +21,7 @@ body {
     background: var(--primary-color);
 }
 
-/* Khối chứa toàn bộ: chia 2 phần (signin + signup) */
+/* CONTAINER */
 .container {
     display: flex;
     width: 800px;
@@ -27,7 +29,6 @@ body {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-
 }
 
 .signin,
@@ -41,7 +42,7 @@ body {
 .signin {
     font-size: 18px;
     text-align: center;
-    background: var(--primary-color);
+    background: var(--secondary-color);
 }
 
 h1 {
@@ -69,7 +70,7 @@ h1 {
     color: #999;
 }
 
-/*  Remember me + Forgot password */
+/*  REMEMBER ME + FORGOT PASSWORD */
 .remember-forget {
     display: flex;
     justify-content: space-between;
@@ -83,7 +84,7 @@ h1 {
     color: #00b894;
 }
 
-/* Signin button */
+/* BUTTON */
 .btn {
     width: 100%;
     padding: 12px;
@@ -96,23 +97,26 @@ h1 {
     margin: 20px 0;
 }
 
-
+/* REGISTER LINK */
 .register-link {
     text-align: center;
     margin-bottom: 10px;
 }
 
-/* social-btn */
+/* SOCIAL-LOGIN */
 .social-login {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-.social-btn i {
-    font-size: 28px;
+.social-btn img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform .3s ease;
 }
 
 .social-btn img:hover {
